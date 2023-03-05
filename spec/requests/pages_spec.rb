@@ -1,51 +1,51 @@
 require 'rails_helper'
 
 RSpec.describe "Pages", type: :request do
-  describe "GET /index" do
+  describe "GET /" do
     it "returns http success" do
-      get "/pages/index"
+      get "/"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /contact" do
     it "returns http success" do
-      get "/pages/contact"
+      get "/contact"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /about" do
     it "returns http success" do
-      get "/pages/about"
+      get "/about"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /services" do
     it "returns http success" do
-      get "/pages/services"
+      get "/services"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /products" do
     it "returns http success" do
-      get "/pages/products"
+      get "/products"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /clients" do
     it "returns http success" do
-      get "/pages/clients"
+      get "/clients"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /testimonials" do
     it "returns http success" do
-      get "/pages/testimonials"
+      get "/testimonials"
       expect(response).to have_http_status(:success)
     end
   end
