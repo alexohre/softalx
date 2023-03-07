@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "products", to: "pages#products"
   get "clients", to: "pages#clients"
   get "testimonials", to: "pages#testimonials"
+  get "privacy-policy", to: "pages#privacy"
+  get "terms", to: "pages#terms"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
 end

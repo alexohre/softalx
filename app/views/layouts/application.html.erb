@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head data-turbo-permanent>
     <title><%= @title ? @title : "Update me now..." %> - Softalx Solutions</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -45,10 +45,6 @@
     </div>
     <%= render 'shared/footer' %>
     
-    <script>
-      const d = new Date();
-      let year = d.getFullYear();
-      document.getElementById("demo").innerHTML = year;
-      </script>
+    
   </body>
 </html>

@@ -50,4 +50,18 @@ RSpec.describe "Pages", type: :request do
     end
   end
 
+  describe "GET /privacy-policy" do
+    it "returns http success" do
+      get "/privacy-policy"
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET /terms" do
+    it "returns http success" do
+      get "/terms"
+      expect(response).to have_http_status(:success)
+    end
+  end
+
 end

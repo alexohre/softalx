@@ -14,8 +14,10 @@
                                <br> Subscribe now and stay connected with us!</p>
                                   <div class="axil-newsletter">
                                   <%#= form_with(model: @newsletter, class: "newsletter-form")  do |form| %>
+                                  <form class="newsletter-form" action="#">
                                     <input  id="newsletter_email" type="email" placeholder="Email" Name="newsletter[email]" required>
                                         <button class="axil-button btn-transparent" type="submit" name="commit" ><span class="button-text">Subscribe</span><span class="button-icon"></span></button>
+                                  </form>
                                     <%# end %>
                                   </div>
                           </div>
@@ -60,7 +62,7 @@
                               <h6 class="title">Support</h6>
                               <div class="footer-menu-container">
                                   <ul class="ft-menu liststyle link-hover">
-                                      <li><a href="/contacts">Contact</a></li>
+                                      <li><a href="/contact">Contact</a></li>
                                       <li><a href="/privacy-policy">Privacy Policy</a></li>
                                       <li><a href="/site-map">Sitemap</a></li>
                                   </ul>
@@ -78,7 +80,7 @@
                   <div class="row row--0 ptb--20 axil-basic-thine-line">
                       <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <div class="inner text-center text-md-start">
-                              <p>©2021 - <span id="demo"></span>. All rights reserved by Softalx Solutions.</p>
+                              <p>©2021 - <span id="currentYear"></span>. All rights reserved by Softalx Solutions.</p>
                           </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-12 col-12">
@@ -96,3 +98,14 @@
       </div>
   </footer>
   <!-- End Footer Area -->
+
+  <%# <script>
+      const d = new Date();
+      let year = d.getFullYear();
+      document.getElementById("demo").innerHTML = year;
+      </script> %>
+
+      <script>
+  var currentYear = new Date().getFullYear();
+  document.getElementById('currentYear').innerHTML = currentYear;
+</script>
