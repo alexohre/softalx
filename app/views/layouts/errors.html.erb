@@ -23,35 +23,11 @@
 
   <body>
     <div class="main-content">
-    <%= render 'shared/nav' %>
-
-     <%#= render 'shared/art_header' if request.path == "/articles" %>
-     <%#= render 'shared/abt_header' if request.path == "/about" %>
-     <%#= render 'shared/testi_header' if request.path == "/testimonials" %>
-     <%#= render 'shared/port_header' if request.path == "/portfolio" %>
-     <%#= render 'shared/prod_header' if request.path == "/products" %>
-
-  <%if notice %>
-    <p style="color: green"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p style="color: green"><%= alert %></p>
-  <% end %>
 
     <main class="page-wrapper">
       <%= yield %>
     </main>
 
     </div>
-    <%= render 'shared/footer' %>
-    
-    <script>
-    // import jquery from "jquery";
-
-    
-        // document.addEventListener("turbo:load", () => {
-        //   console.log("hello")})
-    </script>
-    
   </body>
 </html>

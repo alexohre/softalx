@@ -27,8 +27,8 @@
 
     methods: function (e) {
       // axilKey.axilWow();
-      axilKey.counterUp();
-      axilKey.countDown();
+      // axilKey.counterUp();
+      // axilKey.countDown();
       // axilKey.ytPlayer();
       // axilKey.splittingText();
       axilKey.tiltAnimation();
@@ -40,8 +40,8 @@
       axilKey.moveUp();
       axilKey.marqueImages();
       axilKey.scrollDown();
-      axilKey.mouseMOve();
-      axilKey.mouseParalax();
+      // axilKey.mouseMOve();
+      // axilKey.mouseParalax();
       axilKey.stickHeader();
       axilKey.mobileMenu();
       axilKey.scrollSmoth();
@@ -74,16 +74,16 @@
       });
     },
 
-    mouseMOve: function () {
-      $.fn.parallax = function (resistance, mouse) {
-        var $el;
-        $el = $(this);
-        TweenMax.to($el, 0.2, {
-          x: -((mouse.clientX - window.innerWidth / 2) / resistance),
-          y: -((mouse.clientY - window.innerHeight / 2) / resistance),
-        });
-      };
-    },
+    // mouseMOve: function () {
+    //   $.fn.parallax = function (resistance, mouse) {
+    //     var $el;
+    //     $el = $(this);
+    //     TweenMax.to($el, 0.2, {
+    //       x: -((mouse.clientX - window.innerWidth / 2) / resistance),
+    //       y: -((mouse.clientY - window.innerHeight / 2) / resistance),
+    //     });
+    //   };
+    // },
 
     scrollSmoth: function (e) {
       $(document).on("click", ".smoth-animation", function (event) {
@@ -97,13 +97,13 @@
       });
     },
 
-    mouseParalax: function () {
-      $(".paralax-area").mousemove(function (e) {
-        $(".paralax--1").parallax(10, e);
-        $(".paralax--2").parallax(35, e);
-        $(".paralax--3").parallax(15, e);
-      });
-    },
+    // mouseParalax: function () {
+    //   $(".paralax-area").mousemove(function (e) {
+    //     $(".paralax--1").parallax(10, e);
+    //     $(".paralax--2").parallax(35, e);
+    //     $(".paralax--3").parallax(15, e);
+    //   });
+    // },
 
     moveUp: function () {
       $(window).on("load", function () {
@@ -131,16 +131,16 @@
       });
     },
 
-    counterUp: function () {
-      var _counter = $(".count");
-      if (_counter.length) {
-        _counter.counterUp({
-          delay: 10,
-          time: 1000,
-          triggerOnce: true,
-        });
-      }
-    },
+    // counterUp: function () {
+    //   var _counter = $(".count");
+    //   if (_counter.length) {
+    //     _counter.counterUp({
+    //       delay: 10,
+    //       time: 1000,
+    //       triggerOnce: true,
+    //     });
+    //   }
+    // },
 
     // ytPlayer: function () {
     //   $(".play__btn").yu2fvl();
@@ -196,19 +196,19 @@
     //   });
     // },
 
-    countDown: function () {
-      $("[data-countdown]").each(function () {
-        var $this = $(this),
-          finalDate = $(this).data("countdown");
-        $this.countdown(finalDate, function (event) {
-          $this.html(
-            event.strftime(
-              '<span class="axil-count days"><span class="count-inner"><span class="time-count">%-D</span> <p>Days</p></span></span> <span class="axil-count hour"><span class="count-inner"><span class="time-count">%-H</span> <p>Hours</p></span></span> <span class="axil-count minutes"><span class="count-inner"><span class="time-count">%M</span> <p>Minutes</p></span></span> <span class="axil-count second"><span class="count-inner"><span class="time-count">%S</span> <p>Seconds</p></span></span>'
-            )
-          );
-        });
-      });
-    },
+    // countDown: function () {
+    //   $("[data-countdown]").each(function () {
+    //     var $this = $(this),
+    //       finalDate = $(this).data("countdown");
+    //     $this.countdown(finalDate, function (event) {
+    //       $this.html(
+    //         event.strftime(
+    //           '<span class="axil-count days"><span class="count-inner"><span class="time-count">%-D</span> <p>Days</p></span></span> <span class="axil-count hour"><span class="count-inner"><span class="time-count">%-H</span> <p>Hours</p></span></span> <span class="axil-count minutes"><span class="count-inner"><span class="time-count">%M</span> <p>Minutes</p></span></span> <span class="axil-count second"><span class="count-inner"><span class="time-count">%S</span> <p>Seconds</p></span></span>'
+    //         )
+    //       );
+    //     });
+    //   });
+    // },
 
     // scrollTop: function () {
     //   $.scrollUp({

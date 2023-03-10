@@ -4,6 +4,10 @@ import "./controllers";
 
 // import "modernizr";
 import "./jq";
+
+// $(document).on("turbo:load", function () {
+//   alert("hello People");
+// });
 // import jquery from "jquery";
 // window.jQuery = jquery;
 // window.$ = jquery;
