@@ -2,15 +2,18 @@
 import "@hotwired/turbo-rails";
 import "./controllers";
 
-// import "modernizr";
 import "./jq";
-
-// $(document).on("turbo:load", function () {
-//   alert("hello People");
-// });
-// import jquery from "jquery";
-// window.jQuery = jquery;
-// window.$ = jquery;
+// import "modernizr";
+$(document).on("turbo:load", function () {
+  // document.addEventListener("turbo:load", function () {
+  // alert("hey");
+  console.log("Hey");
+  $(".ax-menubar").on("turbo:click", function (e) {
+    e.preventDefault();
+    $(".popup-mobile-manu").toggleClass("visible");
+    $(this).toggleClass("active");
+  });
+});
 
 import "./custom/bootstrap";
 import "./custom/waypoints";
@@ -27,4 +30,4 @@ import "./custom/scrollmagic";
 // import "./custom/addindicators";
 import "./custom/slick";
 import "./custom/scrollup";
-import "./custom/main";
+import "./custom/myjs";

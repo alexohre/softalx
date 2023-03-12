@@ -1,4 +1,4 @@
-class ErrorsController < ApplicationController
+class ErrorsController < ActionController::Base
   def not_found
     @title = "Page not Found"
   end

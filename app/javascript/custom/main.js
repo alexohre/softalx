@@ -21,11 +21,10 @@
         (this._document = $(document)),
         (this._body = $("body")),
         (this._html = $("html")),
-        (this.sideNav = $(".side-nav")),
-        (this._navsearch = $(".axil-search-area"));
+        (this.sideNav = $(".side-nav"));
     },
 
-    methods: function (e) {
+    methods: function () {
       // axilKey.axilWow();
       // axilKey.counterUp();
       // axilKey.countDown();
@@ -41,7 +40,7 @@
       axilKey.marqueImages();
       axilKey.scrollDown();
       // axilKey.mouseMOve();
-      // axilKey.mouseParalax();
+      axilKey.mouseParalax();
       axilKey.stickHeader();
       axilKey.mobileMenu();
       axilKey.scrollSmoth();
@@ -54,7 +53,7 @@
     // },
 
     mobileMenu: function () {
-      $(".mainmenu-item > li.has-children > a").on("click", function (e) {
+      $(".mainmenu-item > li.has-children > a").on("turbo:click", function (e) {
         e.preventDefault();
         $(this).siblings(".submenu").slideToggle("400");
         $(this)
@@ -431,21 +430,17 @@
         inputFocus,
         openSideNav,
         closeSideNav,
-        openSubMenu,
-        closeSubMenu,
         searchTriggerShow,
         searchTriggerHide,
         axilaccordion,
         OpenMobileMenu,
         closeMobileMenu,
         closeMenuWrapperClick,
-        closeMobileMenu2;
-
-      inputblur = function (e) {
-        if (!$(this).val()) {
-          $(this).parent(".form-group").removeClass("focused");
-        }
-      };
+        inputblur = function (e) {
+          if (!$(this).val()) {
+            $(this).parent(".form-group").removeClass("focused");
+          }
+        };
 
       inputFocus = function (e) {
         $(this).parents(".form-group").addClass("focused");
