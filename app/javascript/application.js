@@ -8,11 +8,11 @@ $(document).on("turbo:load", function () {
   // document.addEventListener("turbo:load", function () {
   // alert("hey");
   console.log("Hey");
-  $(".ax-menubar").on("turbo:click", function (e) {
-    e.preventDefault();
-    $(".popup-mobile-manu").toggleClass("visible");
-    $(this).toggleClass("active");
-  });
+  // $(".ax-menubar").on("turbo:click", function (e) {
+  //   e.preventDefault();
+  //   $(".popup-mobile-manu").toggleClass("visible");
+  //   $(this).toggleClass("active");
+  // });
 });
 
 import "./custom/bootstrap";
