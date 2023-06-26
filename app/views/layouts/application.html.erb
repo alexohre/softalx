@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head data-turbo-permanent>
-    <title><%= @title ? @title : "Update me now..." %> - Softalx Solutions</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= favicon_link_tag "favicon.ico" %>
-
-    <!-- Bootstrap icons-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-  </head>
-
-  <body>
-    <div class="main-content">
-    <%= render 'shared/nav' %>
-
-     <%#= render 'shared/art_header' if request.path == "/articles" %>
-     <%#= render 'shared/abt_header' if request.path == "/about" %>
-     <%#= render 'shared/testi_header' if request.path == "/testimonials" %>
-     <%#= render 'shared/port_header' if request.path == "/portfolio" %>
-     <%#= render 'shared/prod_header' if request.path == "/products" %>
-
-  <%if notice %>
-    <p style="color: green"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p style="color: green"><%= alert %></p>
-  <% end %>
-
-    <main class="page-wrapper">
-      <%= yield %>
-    </main>
-
-    </div>
-    <%= render 'shared/footer' %>
-    
-    
-  </body>
+	<head data-turbo-permanent>
+		<title><%= @title ? @title : "Update me now..." %> - Softalx Solutions</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+		<%= favicon_link_tag "favicon.ico" %>
+		<!-- Bootstrap icons-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+		<%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+	</head>
+	<body>
+		<div class="main-content">
+			<%= render 'shared/nav' %>
+			<%#= render 'shared/art_header' if request.path == "/articles" %>
+			<%#= render 'shared/abt_header' if request.path == "/about" %>
+			<%#= render 'shared/testi_header' if request.path == "/testimonials" %>
+			<%#= render 'shared/port_header' if request.path == "/portfolio" %>
+			<%#= render 'shared/prod_header' if request.path == "/products" %>
+			<%if notice %>
+				<p style="color: green"><%= notice %></p>
+			<% end %>
+			<% if alert %>
+				<p style="color: green"><%= alert %></p>
+			<% end %>
+			<main class="page-wrapper">
+				<%= yield %>
+			</main>
+		</div>
+		<%= render 'shared/footer' %>
+	</body>
 </html>
